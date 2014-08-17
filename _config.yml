@@ -1,5 +1,6 @@
 name: Client Site
 url: http://braddenver.github.io/client-site/
+baseurl: /client-site
 markdown: redcarpet
 permalink: /blog/:year/:title.html
 pygments: true

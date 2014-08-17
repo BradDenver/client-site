@@ -1,6 +1,4 @@
-var http       = require('http'),
-connect    = require('connect'),
-path       = require('path'),
+var express    = require('express'),
 spawn      = require('child_process').spawn,
 gulp       = require('gulp'),
 plumber    = require('gulp-plumber'),
@@ -25,6 +23,13 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('assets/fonts/'));
 });
 
+// Javascript
+gulp.task('js', function() {
+  return gulp.src([
+    'bower_components/bootstrap/dist/js/bootstrap.min.js'])
+    .pipe(gulp.dest('assets/js/'));
+});
+
 gulp.task('jekyll', function() {
   jekyll = spawn('jekyll', ['build', '--drafts', '--future']);
 
@@ -34,12 +39,7 @@ gulp.task('jekyll', function() {
 });
 
 gulp.task('watch', function() {
-  /*var server = livereload();
-
-  var reload = function(file) {
-    server.changed(file.path);
-  };*/
- livereload.listen();
+  livereload.listen();
 
   gulp.watch('less/**', ['styles']);
   gulp.watch(['*.html', '*/*.html', '*/*.md', '!_site/**', '!_site/*/**'], ['jekyll']);
@@ -47,13 +47,11 @@ gulp.task('watch', function() {
 });
 
 gulp.task('serve', function() {
-  var app = connect()
-  .use(require('connect-livereload')({port: 35729}))
-  .use(connect.logger('dev'))
-  .use(connect.static(path.resolve('_site')));
-
-  http.createServer(app).listen(4000);
+  var server = express()
+    .use(require('connect-livereload')({port: 35729}))
+    .use('/client-site/', express.static('_site/'))
+    .listen(4000);
 });
 
-gulp.task('build', ['fonts', 'styles', 'jekyll']);
+gulp.task('build', ['fonts', 'js', 'styles', 'jekyll']);
 gulp.task('default', ['watch', 'serve']);
