@@ -1,0 +1,151 @@
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #ffe;
+}
+
+header, #layoutNav .pure-menu-heading, .logo  {
+	font-family: 'Nova Square', sans-serif;
+}
+
+header  {
+	text-align: center;
+	padding: 1em;
+}
+
+header.pageHeader  {
+	background-color: #eed;
+	border-left: 1px #dee solid;
+	border-right: 1px #dee solid;
+	border-bottom: 1px #dee solid;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+
+.owlMain {
+	padding: 0;
+}
+
+header.owl {
+	width: 2em;
+	font-size: 200px;
+	margin: 0.5em auto;
+	background-color: transparent;
+	padding: 0;
+}
+
+@media (max-width: 399px) {
+    
+    header.owl {
+		font-size: 160px;
+		left: 0;
+		position: absolute;
+	}
+}
+
+.body {
+	color: #444;
+}
+
+.wing, .tail {
+	color: #888;
+}
+
+#layoutNav .pure-menu-heading {
+	text-transform: none;
+}
+
+
+
+#layout {
+	padding-left: 150px;
+}
+
+main {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 5em;
+}
+
+article {
+	padding: 1em;
+	margin-top: 2em;
+}
+
+a.logo {
+	font-size: 50px;
+	color: #000;
+	line-height: 1.2em;
+	background-color: #fff;
+	width: 1.6em;
+	padding: 0 0 0.4em 0;
+	text-align: center;
+	border-radius: .2em;
+	margin: 1em auto;
+	border: 0;
+}
+
+.photo {
+	border: 1px solid #dee;
+	padding: 0.5em;
+	background-color: #eed;
+	box-sizing: border-box;
+	float: right;
+	clear: right;
+	width: 60%;
+	margin-left: 0.5em;
+}
+
+.photoDiv {
+	padding: 1em;
+	box-sizing: border-box;
+
+}
+
+.contact dt {
+	font-size: 1.5em;
+}
+.contact dd {
+	margin-bottom: 2em;
+}
+.contact a {
+	color: #999;
+}
+.contact a:hover {
+	color: #777;
+}
+
+a.muted {
+	color: #999;
+}
+a.muted:hover {
+	color: #777;
+}
+
+.articleList dt {
+	font-size: 1.5em;
+}
+.articleList dd {
+	margin-bottom: 2em;
+  font-style: italic;
+}
+.articleList a {
+	color: #999;
+}
+.articleList time {
+  color: #777;
+  font-size: 0.5em;
+}
+.articleList a:hover {
+	color: #777;
+}
+
+#disqus_thread {
+  background-color: #fff;
+  border: 1px solid #dee;
+  padding: 0.5em;
+}

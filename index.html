@@ -1,0 +1,38 @@
+---
+layout: bootstrap
+title: Intro
+description: A description.
+blocks:
+  -
+    title: About Us
+    content: Alternate Dwellings build homes filled with heart and character in VIC, NSW & QLD. We are a fourth generation building family since 1920. Come and see how we bring all the comforts of homestead living together into one smart building package.
+  -
+    title: Unique Style
+    content: Our home designs capture the essence of Australian living with their sprawling verandahs and decks. We offer distinctive timber designs perfectly matched to the Australian landscape and way of life.
+  -
+    title: We Build To Finish
+    content: We offer a customised and personal building experience where you can choose to what stage we build, whether it be to Lock Up stage or a complete Finish. Our Flexibility allows you to decide how far you personalise your home, creating the Finish you’re after.
+  -
+    title: Custom Designs
+    content: Choose from our collection of fully featured home designs and lofted barns, or create a home design built to your exact needs and budget using our unique building system.
+slideshow:
+  -
+    img: http://www.alternatedwellings.com.au/img/slider2/1.jpg
+    caption: 1
+  -
+    img: http://www.alternatedwellings.com.au/img/slider2/2.jpg
+    caption: 2
+---
+
+{% include carousel.html data=page.slideshow showControls=true %}
+
+<div class="row">
+	{% for block in page.blocks %}
+  <div class="col-lg-3">
+    <h2>{{block.title}}</h2>
+		<p>
+			{{block.content}}
+		</p>
+  </div>
+	{% endfor %}
+</div>

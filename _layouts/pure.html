@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google-site-verification" content="HPC1IPVUzo6e1ULbKS5whJEFsURo_quEuQ41esVS0LM" />
+
+    <title>{{ page.title }} - {{ site.name }}</title>
+    
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nova+Square|Open+Sans">
+    <link rel="sitemap" href="/sitemap.xml" title="Sitemap" type="application/xml">
+
+    <!--[if lte IE 8]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  </head>
+  <body>
+
+    <div id="layout" class="pure-g-r">
+    	
+    	<nav id="layoutNav" class="pure-u">
+    		
+            <button class="menuToggle" onclick="toggleMenu();">&equiv;</button>
+
+            <div id="layoutNavMenu" class="pure-menu pure-menu-open">
+                
+                {% if page.title != 'Intro' %}
+                <a class="logo" href="/">b,d</a>
+                {% endif %}
+
+                <div class="pure-menu-heading">
+                    <a href="/" >Brad Denver</a>
+                </div>
+
+				<ul>
+          <li><a href="/about/" {% if page.title == 'About' %} class="pure-menu-selected" {% endif %} >About</a></li>
+          <li><a href="/blog/" {% if page.title == 'Blog' %} class="pure-menu-selected" {% endif %} >Blog</a></li>
+					<li><a href="/contact/" {% if page.title == 'Contact' %} class="pure-menu-selected" {% endif %} >Contact</a></li>
+					<li><a href="/setup/" {% if page.title == 'My Setup' %} class="pure-menu-selected" {% endif %} >My Setup</a></li>
+					<li><a href="/resources/" {% if page.title == 'Resources' %} class="pure-menu-selected" {% endif %} >Resources</a></li>
+				</ul>
+			</div>
+    	</nav>
+
+    	<main class="pure-u" role="main">
+    		{{ content }}
+    	</main>
+
+    </div>
+
+    {% include toggleMenu.html %}
+
+    {% include ga.html %}
+
+  </body>
+</html>

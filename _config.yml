@@ -1,0 +1,7 @@
+name: Client Site
+url: http://client-site.com
+markdown: redcarpet
+permalink: /blog/:year/:title.html
+pygments: true
+//exclude: [bower.json, bower_components, Gruntfile.js, logo, node_modules, package.json]
+exclude: [bower.json, Gruntfile.js, logo, node_modules, package.json]
