@@ -6,5 +6,3 @@ permalink: /blog/:year/:title.html
 pygments: true
 //exclude: [bower.json, bower_components, Gruntfile.js, logo, node_modules, package.json]
 exclude: [bower.json, Gruntfile.js, logo, node_modules, package.json]
-prose:
-  siteurl: 'http://braddenver.github.io/client-site/'
